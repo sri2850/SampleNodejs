@@ -1,0 +1,22 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: Bash@3
+  inputs:
+    targetType: 'Testing Az service principal with read only Access'
+    script: |
+      # Write your commands here
+      
+      echo 'Hello world'
+
+      az login --service-principal -u 6598263e-9ad6-4d4a-b7ad-1ddbd353168c -p cMQn.m1StgNqtz09z3x-_-ZTk~i95mfy_p
+      az group list
