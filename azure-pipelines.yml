@@ -3,8 +3,7 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- master
+trigger: none
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -18,5 +17,5 @@ steps:
       
       echo 'Hello world'
 
-      az login --service-principal -u 6598263e-9ad6-4d4a-b7ad-1ddbd353168c -p cMQn.m1StgNqtz09z3x-_-ZTk~i95mfy_p
+      az login --service-principal -u 6598263e-9ad6-4d4a-b7ad-1ddbd353168c -p cMQn.m1StgNqtz09z3x-_-ZTk~i95mfy_p --tenant yaswanth354@gmail.com
       az group list
