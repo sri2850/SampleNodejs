@@ -17,5 +17,5 @@ steps:
       
       echo 'Hello world'
 
-      az login --service-principal -u 6598263e-9ad6-4d4a-b7ad-1ddbd353168c -p cMQn.m1StgNqtz09z3x-_-ZTk~i95mfy_p --tenant yaswanth354gmail.onmicrosoft.com
+      az login --service-principal -u 2f7fa7f2-7bc5-4d08-a819-b7e33792a7a1 -p cMQn.m1StgNqtz09z3x-_-ZTk~i95mfy_p --tenant yaswanth354gmail.onmicrosoft.com
       az group list
