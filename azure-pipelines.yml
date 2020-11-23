@@ -19,4 +19,16 @@ steps:
 
       az login --service-principal -u 2f7fa7f2-7bc5-4d08-a819-b7e33792a7a1 -p cMQn.m1StgNqtz09z3x-_-ZTk~i95mfy_p --tenant yaswanth354gmail.onmicrosoft.com
       az group list
-      az resource list
+      az resource list > sp.json
+      cat sp.json
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.ArtifactStagingDirectory)'
+    Contents: '**/*.json'
+    TargetFolder: 
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
